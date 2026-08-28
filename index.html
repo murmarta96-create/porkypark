@@ -1,119 +1,188 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-
-   <meta charset="UTF-8">
-
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <title>Porkypark</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <img
+        src="https://cdn.iconscout.com/icon/free/png-256/free-pig-icon-svg-download-png-1651692.png?f=webp&w=128.png 2x"
+        alt="Logo de Porkypark">
+    </div>
 
-<main id="principal"></main>
-
-  
-</a>
-   <header>Porkypark</header><img
-    src="https://cdn.iconscout.com/icon/free/png-256/free-pig-icon-svg-download-png-1651692.png?f=webp&w=128.png 2x"
-    alt="Logo de Porkypark"
-
-   <h1>Parque de diversiones</h1>
+    <div class="page-title">
+      <h1>Porkypark</h1>
+    </div>
 
     <nav class="menu">
-
-       <ul>
-
-           <li><a href="#principal">Principal</a></li>
-           <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-           <li><a href="#contacto">Contacto</a></li>
-
-       </ul>
-
+      <ul>
+        <li><a href="#principal">principal</a></li>
+        <li><a href="#sobre-nosotros">sobre nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
     </nav>
 
-       <h2>Reserva una mesa</h2>
+    <div class="user-area">
+      <div class="login">
+        <button>Iniciar sesión</button>
+      </div>
+      <div class="register">
+        <button>Registrarse</button>
+      </div>
+    </div>
+  </header>
 
-       <label for="fecha">Selecciona una fecha:</label>
+  <main>
+    <section class="hero">
+      <div class="hero-image">
+        <img src="https://goo.su/EURJ8" alt="Imagen del restaurante">
+      </div>
+      <div class="hero-call-to-action">
+        <div class="hero-call-to-action-title">
+          <h2>Restaurante y espectáculo</h2>
+        </div>
 
-       <input type="date" id="fecha">
+        <div class="hero-call-to-action-description">
+          <p> Restaurante de hamburguesas hechas con carne de cerdo negro con menús para vegetarianos, menús para
+            celiacos y más.
+            Disponemos de espectáculos infantiles, fiestas, eventos y más.</p>
+          <p>RESERVA YA CON NOSOTROS</p>
+        </div>
 
-       <button>Reservar</button>
+        <div class="hero-call-to-action-reservation">
+          <form>
+            <label for="fecha">Selecciona una fecha:</label>
+            <input type="date" id="fecha">
+            <button>Reservar</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-    </main>
-
-    <section id="sobre-nosotros">
-
-       <h2>Actividades y eventos</h2>
-
-       <p>
+    <section class="cards">
+      <div class="card">
+        <div class="card-title">
+          <h2>Actividades y eventos</h2>
+        </div>
+        <div class="card-image">
+          <img src="https://goo.su/dwdAJ" alt="Imagen de actividades y eventos">
+        </div>
+        <div class="card-description">
+          <p>
             Realizamos conciertos, fiestas en días festivos con nuestro DJ Porky e invitados,
             animación infantil, espectáculos, etc.
-       </p>
+          </p>
+        </div>
+      </div>
 
+      <div class="card">
+        <div class="card-title">
+          <h2>Precios</h2>
+        </div>
+        <div class="card-image">
+          <img src="https://goo.su/s01x" alt="Imagen de la comida">
+        </div>
+        <div class="card-description">
+          <p>
+            Ofrecemos precios competitivos para diferentes tipos de eventos y grupos, usualmente 15EUR un men,u de
+            adultos con hamburguesa, patatas fritas grandes y refresco, menu Porkinfantil a 7.50EU.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h2>Reservar el local y organizar eventos con nosotros</h2>
+        </div>
+        <div class="card-image">
+          <img src="https://goo.su/0g1k" alt="Imagen de la reserva del local">
+        </div>
+        <div class="card-description">
+          <p>Puedes contactar con nosotros para obtener
+            más información y/o reservar el local para fiestas y eventos.</p>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section class="accordion">
+      <div class="accordion-content">
+        <details>
+          <summary>Nuestros proveedores</summary>
+          <p>
+            Trabajamos con producto 100% mallorquín, para cocinar las hamburguesas utilizamos carne de cerdo negro que
+            viene de provedores locales de ganadería porcina autóctona de Mallorca.
+          </p>
+        </details>
+      </div>
 
-       <h2>Precios</h2>
+      <div class="accordion-content">
+        <details>
+          <summary>Foodtruck</summary>
+          <p>
+            También ofrecemos servicio de Foodtruck en eventos y fiestas, hemos estado en sitios cómo la famosa Burger
+            fest, Extreme Division, Esos Kuernos Rock Festival, verbenas y mucho más.
+          </p>
+        </details>
+      </div>
 
-       <p>
-           Un menú completo por 15€ y un menú infantil por 10€.
-       </p>
-
+      <div class="accordion-content">
+        <details>
+          <summary>Precios</summary>
+          <p>
+            Un menú de adulto con hamburguesa, patatas fritas grandes y refresco son 15€ y el menú Porkinfantil cuesta
+            7´50€.
+          </p>
+        </details>
+      </div>
     </section>
+  </main>
 
-       <h2>Reservar el local y organizar eventos con nosotros</h2>
+  <footer>
+    <div class="contact-us">
+      <section class="contact">
+        <h2>Contactanos</h2>
+    </div>
+    <div class="contact-info">
+      <form action="#" method="post">
+        <div class="div">
 
-       <p>
-         Puedes contactar con nosotros para obtener
-         más información y/o reservar el local para fiestas y eventos.
-       </p>
+        </div>
 
-    </section>
-    
-<details>
- <summary>Nuestros proveedores</summary>
- <p>
-     Trabajamos con producto 100% mallorquín, para cocinar las hamburguesas utilizamos carne de cerdo negro que viene de provedores locales de ganadería porcina autóctona de Mallorca.
- </p>
-</details>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-<details>
- <summary>Foodtruck</summary>
- <p>     
-   También ofrecemos servicio de Foodtruck en eventos y fiestas, hemos estado en sitios cómo la famosa Burger fest, Extreme Division, Esos Kuernos Rock Festival, verbenas y mucho más.
-</p>
-</details>
+        <div class="div"></div>
 
-<details>
- <summary>Precios</summary>
-<p>
-Un menú de adulto con hamburguesa, patatas fritas grandes y refresco son 15€ y el menú Porkinfantil cuesta 7´50€.
-</p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
+        <div class="div"></div>
 
-<main id="contacto"></main>
+        <label for="numero">Número de teléfono:</label>
+        <input type="tel" id="numero" name="numero" required>
 
-</details>
-<form action="#" method="post">
-  <div class="div"></div><label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" required>
+        <div class="div"></div><label for="mensaje">Mensaje:</label>
+        <p><textarea id="mensaje" name="mensaje" required></textarea></p>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
 
-  <div class="div"></div><label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+    <section class="footer-navigation">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.005868703127!2d2.6475081763834933!3d39.5820181060189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793dd187a1787%3A0xfeeb430bb04ae106!2sPorkades!5e0!3m2!1ses!2ses!4v1787916942569!5m2!1ses!2ses"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </section>s
+  </footer>
 
-  <div class="div"></div><label for="numero">Número de teléfono:</label>
-  <input type="tel" id="numero" name="numero" required>
-
-  <div class="div"></div><label for="mensaje">Mensaje:</label>
-  <p><textarea id="mensaje" name="mensaje" required></textarea></p>
-
-  <button type="submit">Enviar</button>
-</form>
 </body>
 
 </html>
