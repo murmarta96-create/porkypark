@@ -1,188 +1,429 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Porkypark | Hamburguesería Gourmet de Cerdo Negro & Espectáculos en Mallorca</title>
+  <meta name="description"
+    content="Porkypark - Restaurante de hamburguesas de cerdo negro autóctono de Mallorca con espectáculos infantiles, DJ Porky, Foodtruck, menús para celíacos y vegetarianos. ¡Reserva tu mesa o evento!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <!-- Code injected by Five-server -->
+  <script async data-id="five-server" data-file="c:\Users\marta.mur\Documents\Git\porkypark\index.html"
+    type="application/javascript" src="/fiveserver.js"></script>
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <img
-        src="https://cdn.iconscout.com/icon/free/png-256/free-pig-icon-svg-download-png-1651692.png?f=webp&w=128.png 2x"
-        alt="Logo de Porkypark">
-    </div>
-
-    <div class="page-title">
-      <h1>Porkypark</h1>
-    </div>
-
-    <nav class="menu">
-      <ul>
-        <li><a href="#principal">principal</a></li>
-        <li><a href="#sobre-nosotros">sobre nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <div class="user-area">
-      <div class="login">
-        <button>Iniciar sesión</button>
+  <!-- Header / Navigation -->
+  <header id="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="#principal" class="logo-link">
+          <div class="logo-icon-wrapper">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-pig-icon-svg-download-png-1651692.png"
+              alt="Logo de Porkypark" class="logo-img">
+          </div>
+          <div class="page-title">
+            <h1>Porky<span>park</span></h1>
+            <span class="logo-tagline">Mallorca • Burger & Show</span>
+          </div>
+        </a>
       </div>
-      <div class="register">
-        <button>Registrarse</button>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="menu" id="mainNav">
+        <ul>
+          <li><a href="#principal" class="active"><i class="fa-solid fa-house"></i> Principal</a></li>
+          <li><a href="#actividades"><i class="fa-solid fa-masks-theater"></i> Actividades</a></li>
+          <li><a href="#sobre-nosotros"><i class="fa-solid fa-circle-info"></i> Sobre nosotros</a></li>
+          <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-area">
+        <div class="login">
+          <button class="btn btn-secondary" id="loginBtn">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión
+          </button>
+        </div>
+        <div class="register">
+          <button class="btn btn-primary" id="registerBtn">
+            <i class="fa-solid fa-user-plus"></i> Registrarse
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-image">
-        <img src="https://goo.su/EURJ8" alt="Imagen del restaurante">
-      </div>
-      <div class="hero-call-to-action">
-        <div class="hero-call-to-action-title">
-          <h2>Restaurante y espectáculo</h2>
+  <main id="principal">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-container">
+        <div class="hero-image-wrapper">
+          <div class="hero-image">
+            <img
+              src="https://estaticos-cdn.prensaiberica.es/clip/516cd847-3f37-4ea0-991e-445a0e58bad2_16-9-discover-aspect-ratio_default_0_x791y1515.webp">
+            <div class="hero-badge">
+              <span class="badge-icon">🥓</span>
+              <div>
+                <strong>100% Porc Negre</strong>
+                <p>Autóctono de Mallorca</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="hero-call-to-action-description">
-          <p> Restaurante de hamburguesas hechas con carne de cerdo negro con menús para vegetarianos, menús para
-            celiacos y más.
-            Disponemos de espectáculos infantiles, fiestas, eventos y más.</p>
-          <p>RESERVA YA CON NOSOTROS</p>
-        </div>
+        <div class="hero-call-to-action">
+          <div class="hero-tag">
+            <i class="fa-solid fa-fire-flame-curry"></i> Gastronomía & Diversión Única
+          </div>
 
-        <div class="hero-call-to-action-reservation">
-          <form>
-            <label for="fecha">Selecciona una fecha:</label>
-            <input type="date" id="fecha">
-            <button>Reservar</button>
-          </form>
-        </div>
-      </div>
-    </section>
+          <div class="hero-call-to-action-title">
+            <h2>Restaurante y espectáculo en vivo</h2>
+          </div>
 
-    <section class="cards">
-      <div class="card">
-        <div class="card-title">
-          <h2>Actividades y eventos</h2>
-        </div>
-        <div class="card-image">
-          <img src="https://goo.su/dwdAJ" alt="Imagen de actividades y eventos">
-        </div>
-        <div class="card-description">
-          <p>
-            Realizamos conciertos, fiestas en días festivos con nuestro DJ Porky e invitados,
-            animación infantil, espectáculos, etc.
-          </p>
-        </div>
-      </div>
+          <div class="hero-call-to-action-description">
+            <p>
+              Disfruta de las mejores hamburguesas artesanas hechas con auténtica <strong>carne de cerdo negro
+                mallorquín</strong>.
+              Contamos con opciones exclusivas para vegetarianos, celíacos y para toda la familia.
+            </p>
+            <p class="hero-highlight">
+              <i class="fa-solid fa-sparkles"></i> Espectáculos infantiles, fiestas con DJ Porky, conciertos en directo
+              y zona recreativa.
+            </p>
+          </div>
 
-      <div class="card">
-        <div class="card-title">
-          <h2>Precios</h2>
-        </div>
-        <div class="card-image">
-          <img src="https://goo.su/s01x" alt="Imagen de la comida">
-        </div>
-        <div class="card-description">
-          <p>
-            Ofrecemos precios competitivos para diferentes tipos de eventos y grupos, usualmente 15EUR un men,u de
-            adultos con hamburguesa, patatas fritas grandes y refresco, menu Porkinfantil a 7.50EU.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">
-          <h2>Reservar el local y organizar eventos con nosotros</h2>
-        </div>
-        <div class="card-image">
-          <img src="https://goo.su/0g1k" alt="Imagen de la reserva del local">
-        </div>
-        <div class="card-description">
-          <p>Puedes contactar con nosotros para obtener
-            más información y/o reservar el local para fiestas y eventos.</p>
+          <div class="hero-call-to-action-reservation">
+            <div class="reservation-card-header">
+              <span class="res-title"><i class="fa-solid fa-calendar-check"></i> RESERVA YA CON NOSOTROS</span>
+              <span class="res-subtitle">¡Asegura tu mesa y espectáculo gratis!</span>
+            </div>
+            <form id="reservationForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fecha"><i class="fa-regular fa-calendar"></i> Fecha:</label>
+                  <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-group">
+                  <label for="personas"><i class="fa-solid fa-users"></i> Personas:</label>
+                  <select id="personas" name="personas">
+                    <option value="2">2 personas</option>
+                    <option value="4" selected>4 personas (Familia)</option>
+                    <option value="6">6 personas</option>
+                    <option value="8+">8+ Grupo / Fiesta</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-accent btn-block">
+                <i class="fa-solid fa-utensils"></i> Reservar Mesa Ahora
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="accordion">
-      <div class="accordion-content">
-        <details>
-          <summary>Nuestros proveedores</summary>
-          <p>
-            Trabajamos con producto 100% mallorquín, para cocinar las hamburguesas utilizamos carne de cerdo negro que
-            viene de provedores locales de ganadería porcina autóctona de Mallorca.
-          </p>
-        </details>
+    <!-- Cards Section / Actividades -->
+    <section class="cards-section" id="actividades">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-star"></i> Descubre la Experiencia</span>
+        <h2 class="section-title">Nuestras Experiencias & Servicios</h2>
+        <p class="section-subtitle">Mucho más que una cena: emoción, música, sabores mallorquines y diversión sin
+          límites.</p>
       </div>
 
-      <div class="accordion-content">
-        <details>
-          <summary>Foodtruck</summary>
-          <p>
-            También ofrecemos servicio de Foodtruck en eventos y fiestas, hemos estado en sitios cómo la famosa Burger
-            fest, Extreme Division, Esos Kuernos Rock Festival, verbenas y mucho más.
-          </p>
-        </details>
+      <div class="cards">
+        <div class="card card-hover-effect">
+          <div class="card-image-box">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop">
+            alt="Actividades y eventos en Porkypark"
+            <span class="card-chip"><i class="fa-solid fa-compact-disc"></i> Shows en directo</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h3>Actividades y eventos</h3>
+            </div>
+            <div class="card-description">
+              <p>
+                Realizamos conciertos acústicos, sesiones de baile en días festivos con nuestro <strong>DJ Porky e
+                  invitados</strong>,
+                animación infantil interactiva, magia y fiestas temáticas.
+              </p>
+            </div>
+            <div class="card-footer-info">
+              <span><i class="fa-solid fa-clock"></i> Fines de semana y festivos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-featured card-hover-effect">
+          <div class="featured-badge">¡Más Popular!</div>
+          <div class="card-image-box">
+            <img src="https://goo.su/zgcbL">
+            alt="Menús y precios de Porkypark
+            <span class="card-chip"><i class="fa-solid fa-tag"></i> Menús Completos</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h3>Precios Inmejorables</h3>
+            </div>
+            <div class="card-description">
+              <p>
+                Precios competitivos para familias y grupos: por solo <strong>15€</strong> disfruta del <em>Menú
+                  Adulto</em> (hamburguesa gourmet, patatas rústicas grandes y refresco). <em>Menú Porkinfantil</em> a
+                solo <strong>7,50€</strong> con regalo.
+              </p>
+            </div>
+            <div class="card-footer-info price-highlight">
+              <span class="price-adult">Adulto: <strong>15,00€</strong></span>
+              <span class="price-child">Infantil: <strong>7,50€</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-hover-effect">
+          <div class="card-image-box">
+            <img src="https://goo.su/2gM6BlT">
+            alt="Reserva de local y fiestas privadas">
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h3>Eventos & Alquiler de Local</h3>
+            </div>
+            <div class="card-description">
+              <p>
+                Organiza cumpleaños inolvidables, cenas de empresa y celebraciones especiales con nosotros. Espacios
+                reservados, sonido profesional y catering personalizado.
+              </p>
+            </div>
+            <div class="card-footer-info">
+              <a href="#contacto" class="card-link-btn">Solicitar presupuesto <i
+                  class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nosotros / Accordion Section -->
+    <section class="accordion-section" id="sobre-nosotros">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-award"></i> Calidad & Origen</span>
+        <h2 class="section-title">Conoce Más Sobre Porkypark</h2>
+        <p class="section-subtitle">Descubre nuestro compromiso con la cocina local, sostenibilidad y eventos móviles.
+        </p>
       </div>
 
-      <div class="accordion-content">
-        <details>
-          <summary>Precios</summary>
-          <p>
-            Un menú de adulto con hamburguesa, patatas fritas grandes y refresco son 15€ y el menú Porkinfantil cuesta
-            7´50€.
-          </p>
-        </details>
+      <div class="accordion-wrapper">
+        <div class="accordion-info-box">
+          <div class="info-graphic">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Pasión Mallorquina</h3>
+            <p>De la granja balear a tu plato, cuidando cada detalle con el mejor sabor y una experiencia única.</p>
+          </div>
+          <div class="stats-mini">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Producto Balear</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+50</span>
+              <span class="stat-label">Festivales y Shows</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.9★</span>
+              <span class="stat-label">Opiniones Clientes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-content">
+            <details open>
+              <summary>
+                <div class="summary-title">
+                  <i class="fa-solid fa-leaf summary-icon"></i>
+                  <span>Nuestros proveedores y producto autóctono</span>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+              </summary>
+              <div class="details-body">
+                <p>
+                  Trabajamos con <strong>producto 100% mallorquín</strong>. Para cocinar nuestras aclamadas hamburguesas
+                  utilizamos exclusivamente carne selecta de cerdo negro procedente de ganaderías porcinas autóctonas
+                  sostenibles de Mallorca, garantizando máxima terneza, jugosidad y sabor auténtico.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="accordion-content">
+            <details>
+              <summary>
+                <div class="summary-title">
+                  <i class="fa-solid fa-truck-fast summary-icon"></i>
+                  <span>Foodtruck en Festivales y Fiestas</span>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+              </summary>
+              <div class="details-body">
+                <p>
+                  ¡Llevamos Porkypark sobre ruedas! Hemos revolucionado los mejores eventos gastronómicos y musicales
+                  como la <strong>Burger Fest</strong>, <strong>Extreme Division</strong>, <strong>Esos Kuernos Rock
+                    Festival</strong>, fiestas patronales y verbenas por toda la isla. ¡Contrátanos para tu evento
+                  privado!
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="accordion-content">
+            <details>
+              <summary>
+                <div class="summary-title">
+                  <i class="fa-solid fa-receipt summary-icon"></i>
+                  <span>Desglose de Precios y Opciones Especiales</span>
+                </div>
+                <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+              </summary>
+              <div class="details-body">
+                <p>
+                  El <strong>Menú de Adulto</strong> cuesta <strong>15€</strong> e incluye hamburguesa completa a
+                  elegir, ración generosa de patatas fritas y bebida.
+                </p>
+                <p>
+                  El <strong>Menú Porkinfantil</strong> cuesta tan solo <strong>7,50€</strong> (hamburguesa mini o
+                  nuggets artesanos + patatas + bebida + sorpresa). Disponemos además de pan sin gluten y alternativas
+                  100% vegetarianas.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="contact-us">
-      <section class="contact">
-        <h2>Contactanos</h2>
-    </div>
-    <div class="contact-info">
-      <form action="#" method="post">
-        <div class="div">
+  <!-- Footer / Contact & Map -->
+  <footer id="contacto">
+    <div class="footer-top">
+      <div class="footer-container">
 
+        <!-- Contact Form Column -->
+        <div class="contact-card">
+          <div class="contact-us">
+            <section class="contact">
+              <span class="contact-badge"><i class="fa-solid fa-paper-plane"></i> Estamos para ayudarte</span>
+              <h2>Contáctanos</h2>
+              <p class="contact-subtitle">¿Tienes alguna duda o quieres reservar para un grupo especial? Escríbenos y te
+                responderemos al instante.</p>
+            </section>
+          </div>
+
+          <div class="contact-info">
+            <form id="contactForm" action="#" method="post">
+              <div class="form-group">
+                <label for="nombre"><i class="fa-solid fa-user"></i> Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Marta Gómez" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email"><i class="fa-solid fa-at"></i> Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="numero"><i class="fa-solid fa-phone"></i> Número de teléfono:</label>
+                <input type="tel" id="numero" name="numero" placeholder="+34 600 000 000" required>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje"><i class="fa-solid fa-comment-dots"></i> Mensaje o Petición:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"
+                  placeholder="Cuéntanos fecha aproximada, número de comensales o tu consulta..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+              </button>
+            </form>
+          </div>
         </div>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <!-- Location & Details Column -->
+        <section class="footer-navigation">
+          <div class="location-details-box">
+            <div class="location-header">
+              <span class="location-tag"><i class="fa-solid fa-location-dot"></i> Encuéntranos en Palma</span>
+              <h3>Nuestra Ubicación</h3>
+            </div>
 
-        <div class="div"></div>
+            <div class="quick-details">
+              <div class="detail-row">
+                <i class="fa-solid fa-map-pin detail-icon"></i>
+                <div>
+                  <strong>Dirección:</strong>
+                  <p>Carrer D'ausiàs March, 19, 07003 Palma, Islas Baleares</p>
+                </div>
+              </div>
+              <div class="detail-row">
+                <i class="fa-solid fa-clock detail-icon"></i>
+                <div>
+                  <strong>Horarios:</strong>
+                  <p>Mar - Jue: 13:00 - 23:30 | Vie - Dom: 12:30 - 01:00</p>
+                </div>
+              </div>
+              <div class="detail-row">
+                <i class="fa-solid fa-phone detail-icon"></i>
+                <div>
+                  <strong>Teléfono directo:</strong>
+                  <p>+34 971 00 00 00</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <div class="div"></div>
-
-        <label for="numero">Número de teléfono:</label>
-        <input type="tel" id="numero" name="numero" required>
-
-        <div class="div"></div><label for="mensaje">Mensaje:</label>
-        <p><textarea id="mensaje" name="mensaje" required></textarea></p>
-        <button type="submit">Enviar</button>
-      </form>
+          <div class="map-wrapper">
+            <div class="map">
+              <iframe title="Ubicación de Porkypark Mallorca"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.005868703127!2d2.6475081763834933!3d39.5820181060189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793dd187a1787%3A0xfeeb430bb04ae106!2sPorkades!5e0!3m2!1ses!2ses!4v1787916942569!5m2!1ses!2ses"
+                width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
-    <section class="footer-navigation">
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.005868703127!2d2.6475081763834933!3d39.5820181060189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793dd187a1787%3A0xfeeb430bb04ae106!2sPorkades!5e0!3m2!1ses!2ses!4v1787916942569!5m2!1ses!2ses"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Porkypark Mallorca S.L. Todos los derechos reservados.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram de Porkypark"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook de Porkypark"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok de Porkypark"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="TripAdvisor de Porkypark"><i class="fa-solid fa-bowl-food"></i></a>
+        </div>
       </div>
-    </section>s
+    </div>
   </footer>
 
-</body>
-
-</html>
+  <!-- Notification Toast Modal -->
+  <div id="toastMessage" class="toast hidden">
+    <i class="fa-solid fa-circle-check toast-icon"></i>
+    <div class="toast-content">
+      <h4 id="toastTitle">¡Éxito!</h4>
+      <p id="toastBody">Acción realizada correctamente.</p>
+    </div>
+  </div>
