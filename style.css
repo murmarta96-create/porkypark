@@ -1,102 +1,3 @@
-/* ==========================================================================
-   PORKYPARK - CSS Súper Simple y Limpio
-   ========================================================================== */
-
-/* --- 1. Variables de Color y Diseño --- */
-:root {
-  --primary: #f43f5e;
-  --secondary: #fb7185;
-  --bg-dark: #180d16;
-  --bg-card: #281425;
-  --bg-input: #3b1c37;
-  --text: #ffffff;
-  --text-muted: #e2b6cb;
-  --border: rgba(251, 113, 133, 0.25);
-  --radius: 12px;
-}
-
-/* --- 2. Reseteo y Base --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Outfit', sans-serif;
-  line-height: 1.2;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-main {
-  background: linear-gradient(rgba(24, 13, 22, 0.88), rgba(24, 13, 22, 0.88)),
-    url('https://imgs.search.brave.com/hhrRbGKVF-f8azPENBXQNPUKAqfO2XNJlHbtnhR1-l0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9nYXN0/cm9ub21pY2FtZW50/LmNhdC93cC1jb250/ZW50L3VwbG9hZHMv/MjAyNC8wNC9Qb3Jr/YWRlcy1oYW1idXJn/dWVzZXMtc2EtQ290/eGVyaWEtUGFsbWEu/anBn');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* --- 3. Botones y Formularios --- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: var(--bg-card);
-  color: var(--text);
-  border: 1px solid var(--border);
-  transition: opacity 0.2s;
-}
-
-.btn:hover {
-  opacity: 0.85;
-}
-
-.btn-primary {
-  background: var(--primary);
-  border: none;
-  color: #fff;
-}
-
-.btn-accent {
-  background: var(--secondary);
-  border: none;
-  color: #fff;
-}
-
-.btn-block {
-  width: 100%;
-}
-
-.form-group {
-  display: flex;
   flex-direction: column;
   gap: 0.3rem;
   margin-bottom: 0.8rem;
@@ -111,12 +12,12 @@ main {
 .form-group select,
 .form-group textarea {
   background: var(--bg-input);
-  border: 1px solid var(--border);
+  border: 0.1rem solid var(--border);
   color: var(--text);
   padding: 0.6rem 0.8rem;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 0.9rem;
+  border-radius: 0.4rem;
+  font: 0.9rem inherit;
+  width: 100%;
 }
 
 .form-row {
@@ -125,64 +26,182 @@ main {
   gap: 1rem;
 }
 
-/* --- 4. Encabezado / Header --- */
-header {
+.header {
   position: sticky;
   top: 0;
   z-index: 100;
   background: rgba(24, 13, 22, 0.95);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0.1rem solid var(--border);
   padding: 0.75rem 1.5rem;
 }
 
-.header-container {
-  max-width: 1200px;
+.header-container,
+.cards,
+.hero-container,
+.footer-container,
+.footer-bottom-container {
+  max-width: var(--max);
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.logo-link {
+.header-container,
+.user-area,
+.logo,
+.logo a,
+.menu ul,
+.summary-title,
+.price-highlight,
+.footer-bottom-container,
+.social-links,
+.detail-row {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.logo-icon-wrapper {
-  width: 40px;
-  height: 40px;
+.header-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
   background: rgba(244, 63, 94, 0.15);
-  border-radius: 8px;
-  padding: 4px;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
 }
 
 .logo-img {
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.page-title h1 span {
-  color: var(--secondary);
+.page-title h1 {
+  font-size: 1.25rem;
 }
 
-.logo-tagline {
-  font-size: 0.7rem;
+.logo-tag,
+.res-subtitle,
+.section-tag,
+.contact-badge,
+.location-tag,
+.footer-bottom-container {
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 .menu ul {
-  display: flex;
   list-style: none;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .menu a {
   padding: 0.4rem 0.8rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-si@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+:root {
+  --primary: #f43f5e;
+  --secondary: #fb7185;
+  --bg-dark: #180d16;
+  --bg-card: #281425;
+  --bg-input: #3b1c37;
+  --text: #fff;
+  --text-muted: #e2b6cb;
+  --border: rgba(251, 113, 133, 0.25);
+  --radius: 0.75rem;
+  --max: 75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main.principal {
+  background: linear-gradient(rgba(24, 13, 22, 0.88), rgba(24, 13, 22, 0.88)),
+    url("https://imgs.search.brave.com/hhrRbGKVF-f8azPENBXQNPUKAqfO2XNJlHbtnhR1-l0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9nYXN0/cm9ub21pY2FtZW50/LmNhdC93cC1jb250/ZW50L3VwbG9hZHMv/MjAyNC8wNC9Qb3Jr/YWRlcy1oYW1idXJn/dWVzZXMtc2EtQ290/eGVyaWEtUGFsbWEu/anBn");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.btn,
+button.login,
+button.register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font: 700 0.9rem inherit;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 0.1rem solid var(--border);
+}
+
+.btn:hover,
+button.login:hover,
+button.register:hover {
+  opacity: 0.85;
+}
+
+.btn-primary,
+.btn-accent,
+button.register {
+  border: 0;
+  color: #fff;
+}
+
+.btn-primary,
+button.register {
+  background: var(--primary);
+}
+
+.btn-accent {
+  background: var(--secondary);
+}
+
+.btn-block,
+.btn-submit {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;ze: 0.9rem;
   color: var(--text-muted);
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .menu a:hover,
@@ -191,103 +210,110 @@ header {
   background: rgba(244, 63, 94, 0.2);
 }
 
-.user-area {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.mobile-menu-toggle {
-  display: none;
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* --- 5. Hero / Sección Principal --- */
-.hero {
+.hero,
+.cards-section,
+.accordion-section {
   padding: 3.5rem 1.5rem;
 }
 
 .hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 1rem 2.5rem;
   align-items: center;
 }
 
 .hero-image {
-  position: relative;
+  grid-column: 1;
+  grid-row: 1 / span 4;
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 0.1rem solid var(--border);
 }
 
 .hero-image img {
   width: 100%;
-  height: 380px;
+  height: 24rem;
   object-fit: cover;
 }
 
-.hero-badge {
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  background: rgba(24, 13, 22, 0.9);
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-size: 0.8rem;
+.hero-call-to-action,
+.hero-call-to-action-title,
+.hero-call-to-action-description,
+.hero-call-to-action-reservation {
+  grid-column: 2;
 }
 
-.hero-tag {
+.hero-tag-text {
   display: inline-block;
   color: var(--secondary);
   background: rgba(244, 63, 94, 0.15);
   padding: 0.3rem 0.8rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 0.8rem;
 }
 
 .hero-call-to-action-title h2 {
   font-size: 2.2rem;
-  margin-bottom: 0.8rem;
 }
 
-.hero-call-to-action-description {
+.hero-call-to-action-description,
+.card-description,
+.details-body,
+.info-graphic p,
+.contact-subtitle,
+.detail-row p {
   color: var(--text-muted);
-  margin-bottom: 1.2rem;
 }
 
-.hero-call-to-action-reservation {
+.hero-highlight {
+  margin-top: 0.6rem;
+  color: var(--text);
+}
+
+.hero-call-to-action-reservation,
+.card,
+.accordion-info-box,
+.accordion-content details,
+.contact-card,
+.location-details-box {
   background: var(--bg-card);
-  padding: 1.25rem;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
+  border: 0.1rem solid var(--border);
+}
+
+.hero-call-to-action-reservation,
+.accordion-info-box,
+.contact-card,
+.location-details-box {
+  padding: 1.5rem;
 }
 
 .reservation-card-header {
   margin-bottom: 0.8rem;
 }
 
-/* --- 6. Títulos de Sección Compartidos --- */
-.section-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.res-title {
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
-.section-tag {
-  color: var(--secondary);
-  font-size: 0.8rem;
+.section-header,
+.cards-section > .section-title,
+.cards-section > .section-subtitle {
+  text-align: center;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-tag,
+.contact-badge,
+.location-tag {
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--secondary);
 }
 
 .section-title {
@@ -295,33 +321,30 @@ header {
   margin: 0.3rem 0;
 }
 
-.section-subtitle {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+.cards-section > .section-subtitle {
+  margin-bottom: 2rem;
 }
 
-/* --- 7. Tarjetas de Actividades --- */
 .cards-section {
-  padding: 3.5rem 1.5rem;
   background: rgba(20, 10, 18, 0.65);
 }
 
 .cards {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
 .card {
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-0.25rem);
+  border-color: var(--secondary);
 }
 
 .featured-badge {
@@ -329,17 +352,16 @@ header {
   top: 0.75rem;
   right: 0.75rem;
   background: var(--primary);
-  color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.2rem 0.6rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   z-index: 2;
 }
 
 .card-image-box {
   position: relative;
-  height: 190px;
+  height: 12rem;
 }
 
 .card-image-box img {
@@ -348,14 +370,19 @@ header {
   object-fit: cover;
 }
 
+.card-image-box img + img {
+  display: none;
+}
+
 .card-chip {
   position: absolute;
   bottom: 0.5rem;
   left: 0.5rem;
+  right: 0.5rem;
   background: rgba(0, 0, 0, 0.7);
   font-size: 0.75rem;
   padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .card-body {
@@ -366,20 +393,18 @@ header {
 }
 
 .card-description {
-  color: var(--text-muted);
   font-size: 0.9rem;
   margin: 0.5rem 0 1rem;
   flex-grow: 1;
 }
 
 .card-footer-info {
-  border-top: 1px solid var(--border);
+  border-top: 0.1rem solid var(--border);
   padding-top: 0.75rem;
   font-size: 0.85rem;
 }
 
 .price-highlight {
-  display: flex;
   justify-content: space-between;
 }
 
@@ -387,65 +412,60 @@ header {
   color: var(--primary);
 }
 
-.price-child strong {
+.price-child strong,
+.card-link-btn,
+.info-graphic i,
+.stat-number,
+.summary-icon,
+.detail-icon {
   color: var(--secondary);
 }
 
 .card-link-btn {
-  color: var(--secondary);
   font-weight: 700;
 }
 
-/* --- 8. Sección Sobre Nosotros & Acordeón --- */
 .accordion-section {
-  padding: 3.5rem 1.5rem;
-}
-
-.accordion-wrapper {
-  max-width: 1200px;
+  max-width: var(--max);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 2rem;
+  align-items: start;
 }
 
-.accordion-info-box {
-  background: var(--bg-card);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+.accordion-section > .section-header {
+  grid-column: 1 / -1;
 }
 
 .info-graphic i {
   font-size: 2rem;
-  color: var(--secondary);
-  margin-bottom: 0.5rem;
 }
 
-.stats-mini {
+.stat-item {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
-  margin-top: 1rem;
+  border-top: 0.1rem solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 .stat-number {
   font-size: 1.3rem;
   font-weight: 800;
-  color: var(--secondary);
 }
 
-.accordion {
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.accordion,
+.footer-navigation,
+.quick-details {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-}
-
-.accordion-content details {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
 }
 
 .accordion-content summary {
@@ -455,55 +475,60 @@ header {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  list-style: none;
+}
+
+.accordion-content summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-arrow {
+  color: var(--text-muted);
+}
+
+details[open] .accordion-arrow {
+  transform: rotate(180deg);
 }
 
 .details-body {
   padding: 0 1.2rem 1rem;
-  color: var(--text-muted);
   font-size: 0.9rem;
 }
 
-/* --- 9. Footer & Contacto --- */
-footer {
+footer.contacto {
   background: #0f070e;
-  border-top: 1px solid var(--border);
+  border-top: 0.1rem solid var(--border);
   padding-top: 3rem;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 1.5rem 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-.contact-card,
-.location-details-box {
-  background: var(--bg-card);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+.contact h2,
+.location-header h3 {
+  margin: 0.4rem 0 0.5rem;
 }
 
 .quick-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
   margin: 1rem 0;
 }
 
 .detail-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.detail-row p {
+  font-size: 0.9rem;
 }
 
 .map-wrapper {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 0.1rem solid var(--border);
 }
 
 .map iframe {
@@ -512,96 +537,56 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border);
+  border-top: 0.1rem solid var(--border);
   padding: 1rem 1.5rem;
 }
 
 .footer-bottom-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.social-links {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .social-links a {
-  width: 30px;
-  height: 30px;
+  width: 1.9rem;
+  height: 1.9rem;
   border-radius: 50%;
   background: var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
+  border: 0.1rem solid var(--border);
 }
 
-/* --- 10. Notificación Toast --- */
-.toast {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: var(--bg-card);
-  border: 1px solid var(--secondary);
-  padding: 0.9rem 1.2rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  z-index: 1000;
-}
-
-.toast.hidden {
-  display: none;
-}
-
-/* --- 11. Adaptable / Responsive --- */
-@media (max-width: 850px) {
-
+@media (max-width: 53rem) {
   .hero-container,
-  .accordion-wrapper,
+  .accordion-section,
   .footer-container,
   .cards,
   .form-row {
     grid-template-columns: 1fr;
   }
 
-  .mobile-menu-toggle {
-    display: block;
+  .hero-image,
+  .hero-call-to-action,
+  .hero-call-to-action-title,
+  .hero-call-to-action-description,
+  .hero-call-to-action-reservation {
+    grid-column: auto;
+    grid-row: auto;
   }
 
-  .menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-dark);
-    padding: 1rem;
-    border-bottom: 1px solid var(--border);
+  .hero-image img {
+    height: 15rem;
   }
 
-  .menu.open {
-    display: block;
-  }
-
+  .header-container,
+  .footer-bottom-container,
   .menu ul {
     flex-direction: column;
-  }
-
-  .user-area {
-    display: none;
+    align-items: flex-start;
   }
 
   .footer-bottom-container {
-    flex-direction: column;
-    gap: 1rem;
+    align-items: center;
     text-align: center;
   }
-}
+      
