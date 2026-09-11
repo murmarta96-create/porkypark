@@ -47,7 +47,7 @@
         </div>
         <div class="register">
           <button class="register">
-           Registrarse
+            Registrarse
           </button>
         </div>
       </div>
@@ -68,7 +68,8 @@
         </div>
         <div class="hero-call-to-action-description">
           <p>
-            Disfruta de las mejores hamburguesas artesanas hechas con auténtica <strong>carne de cerdo negro mallorquín</strong>.
+            Disfruta de las mejores hamburguesas artesanas hechas con auténtica <strong>carne de cerdo negro
+              mallorquín</strong>.
             Contamos con opciones exclusivas para vegetarianos, celíacos y para toda la familia.
           </p>
           <p class="hero-highlight">
@@ -85,26 +86,35 @@
               <span>¡Asegura tu mesa y espectáculo gratis!</span>
             </div>
           </div>
-          <form id="reservationForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fecha"><i class="mdi mdi-calendar-clock"></i> Fecha:</label>
-                <input type="date" class="fecha" name="fecha" required>
+          <form class="reservation-form">
+            <div class="reservation">
+              <div class="campo-fecha">
+                <label for="fecha">
+                  <i class="mdi mdi-calendar-clock"></i> Fecha:
+                </label>
+
+                <input type="date" class="fecha" name="fecha" id="fecha" required>
               </div>
-              <div class="form-group">
-                <label for="personas"><i class="mdi mdi-account-group"></i> Personas:</label>
-                <select class="personas" name="personas">
-                  <option class="option" value="2">2 personas</option>
-                  <option class="option" value="4" selected>4 personas (Familia)</option>
-                  <option class="option" value="6">6 personas</option>
-                  <option class="option" value="8+">8+ Grupo / Fiesta</option>
-                </select>
+
+              <div class="plus-minus-button">
+                <button type="button" class="decrement">
+                  <i class="mdi mdi-minus"></i>
+                </button>
+
+                <input type="number" id="contador" value="0">
+
+                <button type="button" class="increment">
+                  <i class="mdi mdi-plus"></i>
+                </button>
+
+                <span class="mdi mdi-account-multiple"></span>
               </div>
             </div>
-            <button type="submit" class="btn btn-accent btn-block">
-              <i class="mdi mdi-calendar-clock"></i> Reservar Mesa Ahora
-            </button>
           </form>
+
+          <button type="submit" class="btn btn-accent btn-block">
+            <i class="mdi mdi-calendar-clock"></i> Reservar Mesa Ahora
+          </button>
         </div>
       </div>
     </section>
@@ -188,7 +198,7 @@
         </div>
       </div>
       <div class="cards-picture-background">
-        <img src="images/background1.webp" class="cards-picture-background-img">  
+        <img src="images/background1.webp" class="cards-picture-background-img">
       </div>
     </section>
 
@@ -283,7 +293,7 @@
               </p>
             </div>
           </details>
-      </div>
+        </div>
     </section>
   </main>
 
@@ -301,7 +311,7 @@
           </div>
 
           <div class="contact-info">
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form">
               <div class="form-group">
                 <label for="nombre"><i class="mdi mdi-account"></i> Nombre completo:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Porky Pork" required>
